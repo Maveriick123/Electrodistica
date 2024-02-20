@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='/images/favicon.png') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <title>Result</title>
+</head>
+<body>
+    <header>
+        <div >
+            <h1 id="hr"><img  src="../static/images/rayo.jpg" width="50px" height="50px"/> Electrodística <img  src="../static/images/rayo.jpg" width="50px" height="50px"/></h1>
+        </div> 
+    </header>
+    <article>
+     <div >
+        <h2 id="h2r">Analysis of data</h2> 
+     </div>
+   </article>
+   
+   <div class="clearfix"></div>
+   <div class="table">
+    <table>
+            <caption>Stadistics per hour</caption>
+            <tr>
+                <td>Mean:</td>
+                <td>{{media}}</td>
+                
+            </tr>
+            <tr>
+                <td>Variance:</td>
+                <td>{{varianza}}</td>
+            </tr>
+            <tr>
+                <td>Typical desviation:</td>
+                <td>{{desviacion}}</td>
+            </tr>
+      </table> 
+    </div>
+
+   
+    <div  id="a">
+           <img src="{{url_for('static',filename='image.png')}}" alt="grafica" width="1200px"/>
+    </div>
+  </article>
+  <article >
+    <div  id="c">
+           <img src="{{url_for('static',filename='image1.png')}}" alt="grafica" width="1200px"/>
+    </div>
+  </article>
+   <footer>
+    Project developed by Martin Hernandez, Daniel Quineiro and Diego Rodriguez &copy;
+   </footer>
+</body>
+</html>

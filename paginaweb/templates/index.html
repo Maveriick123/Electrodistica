@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/images/favicon.png"/>
+    <link rel="stylesheet" href="../static/styles.css"/>
+    <title>Electrodística</title>
+</head>
+<body>
+    <header>
+        <div >
+            <h1><img  src="../static/images/rayo.jpg" width="50px" height="50px"/> Electrodística <img  src="../static/images/rayo.jpg" width="50px" height="50px"/></h1>
+        </div>
+    </header>
+    
+    <div class="clearfix"></div>
+    <section id="content">
+        <article class="article">
+            <h2 id="h2e">Analyze your data</h2>
+            <p id="p1">Enter your database in .csv format:</p>
+            <br/>
+            <!-- Cambiamos la acción del formulario para apuntar a la ruta de la aplicación Flask -->
+            <!-- También especificamos que el método es POST -->
+            <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+                <input id="b"type="file" name="archivo" id="archivo">
+                <button type="submit">Upload file</button>
+            </form>
+        </article>
+    </section>
+    <img id="i"src="../static/images/graficaaz.jpg" width="100%" height="500px"/>
+    <footer>
+        Project developed by Martin Hernandez, Daniel Quineiro and Diego Rodriguez &copy;
+    </footer>
+</body>
+</html>
